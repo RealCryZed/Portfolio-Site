@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    background: #272627;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: SANS-SERIF;
+}
+
+table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    padding: 10px;
+    border: double;
+    font-size: 18px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #3E3E3E;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+}
+
+h5.validationError {
+    max-width: 210px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: red;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.container-photo {
+    /* Photo by Luca Bravo on Unsplash */
+    /* Photo by Hasan Albari from Pexels */
+    background-image: url("static/pictures/background-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    /*background-color: #ca1122e6;*/
+    width: 100%;
+    transition: opacity 0.3s 0.3s;
+}
+
+.navcon {
+
+}
+
+.navbar-block {
+    text-align: center;
+}
+
+.navbar-link {
+    color: white;
+    margin-right: 15px;
+    font-size: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    /*-webkit-transform: perspective(1px) translateZ(0);*/
+    transform: perspective(1px) translateZ(0);
+    /*box-shadow: 0 0 1px transparent;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+}
+
+.navbar-link:last-child {
+    margin-right: 0 !important;
+}
+
+.navbar-link:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: #ffffff;
+    height: 2px;
+    /*-webkit-transition-property: left, right;*/
+    transition-property: left, right;
+    /*-webkit-transition-duration: 0.5s;*/
+    transition-duration: 0.5s;
+    /*-webkit-transition-timing-function: ease-out;*/
+    transition-timing-function: ease-out;
+}
+
+.navbar-link:hover:before, .navbar-link:focus:before, .navbar-link:active:before {
+    left: 0;
+    right: 0;
+}
