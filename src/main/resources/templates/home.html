@@ -11,6 +11,13 @@
 <body>
     <div class="wrapper">
         <div class="container-photo">
+            <div class="main-image-carrier"></div>
+            <h1 class="logo-inside-photo">Igor Petrov</h1>
+            <div>
+                <h3 class="logo-inside-text" id="logo-inside-text-id">Russia-based Java Software Engineer</h3>
+            </div>
+        </div>
+        <div class="front-page-wrapper">
             <div class="navbar">
                 <nav class="navcon">
                     <div class="navbar-block">
@@ -21,15 +28,46 @@
                     </div>
                 </nav>
             </div>
+        </div>
 
-            <div class="main-body">
-                <h1>HELLO WORLD!</h1>
-            </div>
+        <div class="main-body">
+            <h1>HELLO WORLD!</h1>
         </div>
     </div>
 
     <script>
 
+        var pos = 0;
+        var txt = document.getElementById("logo-inside-text-id").innerHTML; /* The text */
+        var speed = 130; /* The speed/duration of the effect in milliseconds */
+        var speedErase = 50;
+        var speedToStop1 = 1000;
+        var speedToStop2 = 1500;
+
+        document.getElementById('logo-inside-text-id').innerText = '';
+
+        setTimeout(typeWriter, speed);
+
+        function typeWriter() {
+            if (pos < txt.length) {
+                document.getElementById('logo-inside-text-id').innerHTML += txt.charAt(pos);
+                pos++;
+                setTimeout(typeWriter, speed);
+            } else {
+                setTimeout(erase, speedToStop2)
+            }
+        }
+
+        function erase() {
+            if (pos >= 0) {
+                var temp = txt.substring(0, pos);
+                document.getElementById('logo-inside-text-id').innerText = temp;
+                pos--;
+                setTimeout(erase, speedErase);
+            }  else {
+                setTimeout(typeWriter, speedToStop1);
+            }
+        }
     </script>
     <script type="text/javascript" src="https://www.dcfonts.com/wp-includes/js/wp-embed.min.js?ver=5.3.2"></script>
 </body>
