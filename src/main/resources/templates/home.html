@@ -12,9 +12,14 @@
     <div class="wrapper">
         <div class="container-photo">
             <div class="main-image-carrier"></div>
-            <h1 class="logo-inside-photo">Igor Petrov</h1>
-            <div>
-                <h3 class="logo-inside-text" id="logo-inside-text-id">Russia-based Java Software Engineer</h3>
+            <h1 class="logo-inside-name">Igor Petrov</h1>
+            <h3 class="logo-inside-text" id="logo-inside-text-id">Russia-based Java Software Engineer</h3>
+
+            <!-- This Icon from www.flaticon.com-->
+            <div class="button-to-about-me-wrapper">
+                <button class="button-to-about-me" th:href="@{/}" onclick="scrollToAboutMe();">
+                    <img th:src="@{icons/down-arrow.png}"/>
+                </button>
             </div>
         </div>
         <div class="front-page-wrapper">
@@ -22,18 +27,28 @@
                 <nav class="navcon">
                     <div class="navbar-block">
                         <a th:href="@{/}" class="navbar-link navbar-link-home">HOME</a>
-                        <a th:href="@{/}" class="navbar-link">MY PROJECTS</a>
                         <a th:href="@{/}" class="navbar-link">ABOUT ME</a>
+                        <a th:href="@{/}" class="navbar-link">MY PROJECTS</a>
                         <a th:href="@{/}" class="navbar-link">CONTACT</a>
                     </div>
                 </nav>
             </div>
         </div>
 
-        <div class="main-body">
-            <h1>HELLO WORLD!</h1>
+        <div id="about-me-wrapper-id" class="about-me-wrapper">
+            <h1 class="about-me-header">About me</h1>
+
+            <p class="about-me-text">I'm 17 years old Java Programmer, based in Omsk, Russia.</p>
+            <p class="about-me-subtext">I am driven by ambition , a desire to develop and get new skills.</p>
         </div>
     </div>
+
+    <script>
+        function scrollToAboutMe() {
+            var element = document.getElementById("about-me-wrapper-id");
+            element.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+        }
+    </script>
 
     <script>
 
@@ -42,7 +57,7 @@
         var speed = 130; /* The speed/duration of the effect in milliseconds */
         var speedErase = 50;
         var speedToStop1 = 1000;
-        var speedToStop2 = 1500;
+        var speedToStop2 = 2500;
 
         document.getElementById('logo-inside-text-id').innerText = '';
 

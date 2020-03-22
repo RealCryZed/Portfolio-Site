@@ -1,5 +1,77 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Lobster|Roboto+Mono&display=swap');
 
+@media only screen and (min-width: 1367px) {
+    .main-image-carrier {
+        min-height: 1000px;
+    }
+
+    .logo-inside-name {
+        top: 370px;
+    }
+
+    .logo-inside-text {
+        top: 470px;
+    }
+
+    .button-to-about-me-wrapper {
+        top: 850px;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (min-width: 1025px) {
+    .main-image-carrier {
+        min-height: 650px;
+    }
+
+    .logo-inside-name {
+        top: 220px;
+    }
+
+    .logo-inside-text {
+        top: 320px;
+    }
+
+    .button-to-about-me-wrapper {
+        top: 550px;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 601px) {
+    .main-image-carrier {
+        min-height: 500px;
+    }
+
+    .logo-inside-name {
+        top: 170px;
+    }
+
+    .logo-inside-text {
+        top: 270px;
+    }
+
+    .button-to-about-me-wrapper {
+        top: 400px;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 400px)  {
+    .main-image-carrier {
+        min-height: 300px;
+    }
+
+    .logo-inside-name {
+        top: 120px;
+    }
+
+    .logo-inside-text {
+        top: 220px;
+    }
+
+    .button-to-about-me-wrapper {
+        top: 200px;
+    }
+}
+
 body {
     margin: 0;
     background: #272627;
@@ -9,6 +81,19 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-family: SANS-SERIF, Roboto Mono, Lobster, Fjalla One;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
 }
 
 table {
@@ -63,47 +148,6 @@ h5.validationError {
 
 .btn {
     cursor: pointer;
-}
-
-.container-photo {
-    min-height: 650px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.main-image-carrier {
-    /* Photo by Glenn Carstens-Peters on Unsplash */
-    background-image: url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
-    min-height: 650px;
-    opacity: 0.3;
-    filter: blur(3px);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: #272627;
-}
-
-.logo-inside-photo {
-    font-family: Fjalla One;
-    position: absolute;
-    width: 100%;
-    top: 220px;
-    text-align: center;
-    /*color: #ca1122e6;*/
-    color: white;
-    font-size: 70px;
-    font-weight: 100;
-}
-
-.logo-inside-text {
-    font-family: Roboto Mono;
-    position: absolute;
-    width: 100%;
-    top: 320px;
-    text-align: center;
-    color: white;
-    font-size: 30px;
 }
 
 .front-page-wrapper {
@@ -162,4 +206,90 @@ h5.validationError {
 .navbar-link:hover:before, .navbar-link:focus:before, .navbar-link:active:before {
     left: 0;
     right: 0;
+}
+
+/*
+ *  FRONT VIEW block
+ */
+
+.container-photo {
+    min-height: 650px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-image-carrier {
+    /* Photo by Glenn Carstens-Peters on Unsplash */
+    background-image: url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
+    /*min-height: 650px;*/
+    opacity: 0.3;
+    filter: blur(3px);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #272627;
+}
+
+.logo-inside-name {
+    font-family: Fjalla One;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    /*color: #ca1122e6;*/
+    color: white;
+    font-size: 70px;
+    font-weight: 100;
+}
+
+.logo-inside-text {
+    font-family: Roboto Mono;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.button-to-about-me-wrapper {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.button-to-about-me {
+    margin: 0 auto;
+}
+
+/*
+ *  ABOUT ME block
+ */
+
+.about-me-wrapper {
+
+}
+
+.about-me-header {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-family: Fjalla one;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+.about-me-text {
+    margin: 10px 0;
+    font-family: Roboto Mono;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+
+.about-me-subtext {
+    margin: 10px 0;
+    font-family: Roboto Mono;
+    font-size: 20px;
+    text-align: center;
+    color: white;
 }
