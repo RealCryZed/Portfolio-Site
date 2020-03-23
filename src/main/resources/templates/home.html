@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="wrapper">
+    <div id="wrapper-id" class="wrapper">
         <div class="container-photo">
             <div class="main-image-carrier"></div>
             <h1 class="logo-inside-name">Igor Petrov</h1>
@@ -23,13 +23,13 @@
             </div>
         </div>
         <div class="front-page-wrapper">
-            <div class="navbar">
+            <div id="navbar-id" class="navbar moved-navbar-off">
                 <nav class="navcon">
                     <div class="navbar-block">
-                        <a th:href="@{/}" class="navbar-link navbar-link-home">HOME</a>
-                        <a th:href="@{/}" class="navbar-link">ABOUT ME</a>
-                        <a th:href="@{/}" class="navbar-link">MY PROJECTS</a>
-                        <a th:href="@{/}" class="navbar-link">CONTACT</a>
+                        <button onclick="scrollToStart();" class="navbar-link navbar-link-home">HOME</button>
+                        <button onclick="scrollToAboutMe();" class="navbar-link">ABOUT ME</button>
+                        <button onclick="scrollToMyProjects();" class="navbar-link">MY PROJECTS</button>
+                        <button class="navbar-link">CONTACT</button>
                     </div>
                 </nav>
             </div>
@@ -41,15 +41,53 @@
             <p class="about-me-text">I'm 17 years old Java Programmer, based in Omsk, Russia.</p>
             <p class="about-me-subtext">I am driven by ambition , a desire to develop and get new skills.</p>
         </div>
+
+        <div id="my-projects-wrapper-id" class="my-projects-wrapper">
+            <div class="img-inside-my-projects"></div>
+            <h1 class="my-projects-header">My Projects</h1>
+
+            <div class="my-projects-list">
+
+            </div>
+        </div>
     </div>
 
     <script>
+        // function getDocHeight() {
+        //     var D = document;
+        //     return Math.max(
+        //         D.body.scrollHeight, D.documentElement.scrollHeight,
+        //         D.body.offsetHeight, D.documentElement.offsetHeight,
+        //         D.body.clientHeight, D.documentElement.clientHeight
+        //     );
+        // }
+
+        window.addEventListener("scroll", function() {
+            if (window.scrollY != 0) {
+                document.getElementById('navbar-id').classList.remove('moved-navbar-off');
+                document.getElementById('navbar-id').classList.add('moved-navbar');
+            } else {
+                document.getElementById('navbar-id').classList.remove('moved-navbar');
+                document.getElementById('navbar-id').classList.add('moved-navbar-off');
+            }
+        });
+    </script>
+    <script>
+        function scrollToStart() {
+            var element = document.getElementById("wrapper-id");
+            element.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+        }
+
         function scrollToAboutMe() {
             var element = document.getElementById("about-me-wrapper-id");
             element.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
         }
-    </script>
 
+        function scrollToMyProjects() {
+            var element = document.getElementById("my-projects-wrapper-id");
+            element.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+        }
+    </script>
     <script>
 
         var pos = 0;
@@ -84,6 +122,6 @@
             }
         }
     </script>
-    <script type="text/javascript" src="https://www.dcfonts.com/wp-includes/js/wp-embed.min.js?ver=5.3.2"></script>
+<!--    <script type="text/javascript" src="https://www.dcfonts.com/wp-includes/js/wp-embed.min.js?ver=5.3.2"></script>-->
 </body>
 </html>

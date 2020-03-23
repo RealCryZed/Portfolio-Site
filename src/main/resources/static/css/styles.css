@@ -165,6 +165,16 @@ h5.validationError {
     transition: opacity 0.3s 0.3s;
 }
 
+.moved-navbar {
+    background-color: black;
+    transition: 1s ease-in-out;
+}
+
+.moved-navbar-off {
+    background-color: transparent;
+    transition: 0.5s ease-in-out;
+}
+
 .navbar-block {
     text-align: center;
 }
@@ -184,6 +194,7 @@ h5.validationError {
 
 .navbar-link:last-child {
     margin-right: 0 !important;
+    transform: perspective(0px) translateZ(0) !important;
 }
 
 .navbar-link:before {
@@ -266,10 +277,10 @@ h5.validationError {
  */
 
 .about-me-wrapper {
-
+    margin-bottom: 50px;
 }
 
-.about-me-header {
+.about-me-header, .my-projects-header {
     padding-top: 50px;
     padding-bottom: 30px;
     font-family: Fjalla one;
@@ -287,9 +298,27 @@ h5.validationError {
 }
 
 .about-me-subtext {
-    margin: 10px 0;
+    margin: 10px 0 0 0;
     font-family: Roboto Mono;
     font-size: 20px;
     text-align: center;
     color: white;
+}
+
+/*
+ *  MY PROJECTS block
+ */
+
+.my-projects-wrapper {
+    background-color: #009FAA;
+    min-height: 400px;
+}
+
+.img-inside-my-projects {
+    /* Photo by Sebastian Engler from unsplash.com*/
+    background-image: url("https://images.unsplash.com/photo-1455476915919-2b028d0a1230?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    opacity: 0.05;
+    width: 100%;
+    min-height: 400px;
+    position: absolute;
 }
