@@ -16,6 +16,32 @@
     .button-to-about-me-wrapper {
         top: 850px;
     }
+
+    .single-project {
+        margin: 20px;
+    }
+
+    .project-image {
+        width: 400px;
+    }
+
+    .project-image-on-hover {
+        min-width: 400px;
+        min-height: 200px;
+    }
+
+    .project-image-text-inside {
+        font-size: 40px;
+        line-height: 200px;
+    }
+
+    .project-name {
+        font-size: 24px;
+    }
+
+    .project-author {
+        font-size: 17px;
+    }
 }
 
 @media only screen and (max-width: 1366px) and (min-width: 1025px) {
@@ -34,9 +60,35 @@
     .button-to-about-me-wrapper {
         top: 550px;
     }
+
+    .single-project {
+        margin: 15px;
+    }
+
+    .project-image {
+        width: 300px;
+    }
+
+    .project-image-on-hover {
+        min-width: 300px;
+        min-height: 150px;
+    }
+
+    .project-image-text-inside {
+        font-size: 30px;
+        line-height: 150px;
+    }
+
+    .project-name {
+        font-size: 18px;
+    }
+
+    .project-author {
+        font-size: 13px;
+    }
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 601px) {
+@media only screen and (max-width: 1024px) and (min-width: 801px) {
     .main-image-carrier {
         min-height: 500px;
     }
@@ -51,6 +103,76 @@
 
     .button-to-about-me-wrapper {
         top: 400px;
+    }
+
+    .single-project {
+        margin: 15px;
+    }
+
+    .project-image {
+        width: 200px;
+    }
+
+    .project-image-on-hover {
+        min-width: 200px;
+        min-height: 100px;
+    }
+
+    .project-image-text-inside {
+        font-size: 20px;
+        line-height: 100px;
+    }
+
+    .project-name {
+        font-size: 12px;
+    }
+
+    .project-author {
+        font-size: 9px;
+    }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 601px) {
+    .main-image-carrier {
+        min-height: 500px;
+    }
+
+    .logo-inside-name {
+        top: 170px;
+    }
+
+    .logo-inside-text {
+        top: 270px;
+    }
+
+    .button-to-about-me-wrapper {
+        top: 400px;
+    }
+
+    .single-project {
+        margin: 15px;
+    }
+
+    .project-image {
+        width: 175px;
+    }
+
+    .project-image-on-hover {
+        min-width: 175px;
+        min-height: 87.5px;
+    }
+
+    .project-image-text-inside {
+        font-size: 18px;
+        line-height: 87.5px;
+    }
+
+    .project-name {
+        font-size: 11px;
+    }
+
+    .project-author {
+        font-size: 8px;
     }
 }
 
@@ -69,6 +191,32 @@
 
     .button-to-about-me-wrapper {
         top: 200px;
+    }
+
+    .single-project {
+        margin: 15px;
+    }
+
+    .project-image {
+        width: 100px;
+    }
+
+    .project-image-on-hover {
+        min-width: 100px;
+        min-height: 50px;
+    }
+
+    .project-image-text-inside {
+        font-size: 10px;
+        line-height: 50px;
+    }
+
+    .project-name {
+        font-size: 6px;
+    }
+
+    .project-author {
+        font-size: 5px;
     }
 }
 
@@ -155,24 +303,40 @@ h5.validationError {
     width: 100%;
 }
 
+.navbar-menu-button-wrapper {
+
+}
+
+.navbar-menu-button {
+    position: fixed;
+    z-index: 99999999999;
+    top: 4px;
+    right: 40px;
+    transition: 0.5s ease-in-out;
+}
+
 .navbar {
     /*background-color: #ca1122e6;*/
     position: fixed;
-    top: 0;
+    top: -50px;
     width: 100%;
-    min-height: 40px;
-    line-height: 40px;
+    z-index: 999;
+    min-height: 50px;
+    line-height: 50px;
+    box-shadow: 0 3px 5px 0 rgba(50,50,50,.4);
     transition: opacity 0.3s 0.3s;
 }
 
 .moved-navbar {
-    background-color: black;
+    background: rgb(8, 8, 8, 0.6);
+    top: 0;
     transition: 1s ease-in-out;
 }
 
 .moved-navbar-off {
     background-color: transparent;
     transition: 0.5s ease-in-out;
+    opacity: 0;
 }
 
 .navbar-block {
@@ -185,11 +349,7 @@ h5.validationError {
     font-size: 25px;
     display: inline-block;
     vertical-align: middle;
-    /*-webkit-transform: perspective(1px) translateZ(0);*/
     transform: perspective(1px) translateZ(0);
-    /*box-shadow: 0 0 1px transparent;*/
-    /*position: relative;*/
-    /*overflow: hidden;*/
 }
 
 .navbar-link:last-child {
@@ -278,10 +438,11 @@ h5.validationError {
 
 .about-me-wrapper {
     margin-bottom: 50px;
+    min-height: 600px;
 }
 
 .about-me-header, .my-projects-header {
-    padding-top: 50px;
+    padding-top: 60px;
     padding-bottom: 30px;
     font-family: Fjalla one;
     font-size: 40px;
@@ -311,14 +472,77 @@ h5.validationError {
 
 .my-projects-wrapper {
     background-color: #009FAA;
-    min-height: 400px;
+    min-height: 600px;
+    position: relative;
 }
 
-.img-inside-my-projects {
-    /* Photo by Sebastian Engler from unsplash.com*/
-    background-image: url("https://images.unsplash.com/photo-1455476915919-2b028d0a1230?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
-    opacity: 0.05;
-    width: 100%;
-    min-height: 400px;
+.my-projects-list {
     position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.project-wrapper {
+    display: flex;
+}
+
+.single-project {
+    width: 100%;
+}
+
+.project-photo-link {
+    display: flex;
+    transition: 1s 1s;
+}
+
+.project-photo-link:hover .project-image-on-hover {
+    visibility: visible;
+    opacity: 0.8;
+}
+
+.project-image {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.project-image-on-hover {
+    position: absolute;
+    color: #fff;
+    visibility: hidden;
+    transition: 0.7s;
+    opacity: 0;
+    background-color: #09914B;
+}
+
+.project-image-text-inside {
+    font-family: Fjalla one;
+    text-align: center;
+}
+
+.project-info {
+    background: #e6e6e6;
+    padding: 7px 5px 7px 9px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-family: CURSIVE;
+}
+
+.project-name {
+    flex: 1 0 0;
+    display: flex;
+    border-radius: 0px;
+}
+
+.project-author {
+    font-weight: 700;
+}
+
+/*.img-inside-my-projects {*/
+/*    !* Photo by Sebastian Engler from unsplash.com*!*/
+/*    background-image: url("https://images.unsplash.com/photo-1455476915919-2b028d0a1230?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");*/
+/*    opacity: 0.05;*/
+/*    width: 100%;*/
+/*    min-height: 600px;*/
+/*    position: absolute;*/
+/*}*/

@@ -15,14 +15,20 @@
             <h1 class="logo-inside-name">Igor Petrov</h1>
             <h3 class="logo-inside-text" id="logo-inside-text-id">Russia-based Java Software Engineer</h3>
 
-            <!-- This Icon from www.flaticon.com-->
             <div class="button-to-about-me-wrapper">
                 <button class="button-to-about-me" th:href="@{/}" onclick="scrollToAboutMe();">
+                    <!-- This Icon from www.flaticon.com-->
                     <img th:src="@{icons/down-arrow.png}"/>
                 </button>
             </div>
         </div>
         <div class="front-page-wrapper">
+<!--            <div id="navbar-menu-button-wrapper-id" class="navbar-menu-button-wrapper">-->
+<!--                <button id="navbar-menu-button-id" class="navbar-menu-button" onclick="openNavbarMenu();">-->
+<!--                    &lt;!&ndash; This Icon from www.flaticon.com&ndash;&gt;-->
+<!--                    <img width="40px" height="40px" th:src="@{icons/menu.png}"/>-->
+<!--                </button>-->
+<!--            </div>-->
             <div id="navbar-id" class="navbar moved-navbar-off">
                 <nav class="navcon">
                     <div class="navbar-block">
@@ -33,35 +39,68 @@
                     </div>
                 </nav>
             </div>
-        </div>
 
-        <div id="about-me-wrapper-id" class="about-me-wrapper">
-            <h1 class="about-me-header">About me</h1>
+            <div id="about-me-wrapper-id" class="about-me-wrapper">
+                <h1 class="about-me-header">About me</h1>
 
-            <p class="about-me-text">I'm 17 years old Java Programmer, based in Omsk, Russia.</p>
-            <p class="about-me-subtext">I am driven by ambition , a desire to develop and get new skills.</p>
-        </div>
+                <p class="about-me-text">I'm 17 years old Java Programmer, based in Omsk, Russia.</p>
+                <p class="about-me-subtext">I am driven by ambition , a desire to develop and get new skills.</p>
+            </div>
 
-        <div id="my-projects-wrapper-id" class="my-projects-wrapper">
-            <div class="img-inside-my-projects"></div>
-            <h1 class="my-projects-header">My Projects</h1>
+            <div id="my-projects-wrapper-id" class="my-projects-wrapper">
+                <!--                <div class="img-inside-my-projects"></div>-->
+                <img src="icons/photo-1455476915919-2b028d0a1230.jpg" style="width:100%;opacity: 0.05;max-height: 600px;">
 
-            <div class="my-projects-list">
 
+                <div class="my-projects-list">
+                    <h1 class="my-projects-header">My Projects</h1>
+                    <!-- 1 project -->
+                    <div class="project-wrapper">
+                        <div class="single-project">
+                            <a class="project-photo-link" href="https://github.com/RealCryZed/cstv">
+                                <img class="project-image" src="icons/1-pic-project.png">
+                                <div class="project-image-on-hover">
+                                    <h3 class="project-image-text-inside">Visit the site</h3>
+                                </div>
+                            </a>
+                            <div class="project-info">
+                                <span class="project-name">Counter-Strike TV</span>
+                                <span class="project-author">by RealCryZed</span>
+                            </div>
+                        </div>
+                        <!-- 2 project -->
+                        <div class="single-project">
+                            <a class="project-photo-link" href="https://github.com/RealCryZed/shopper">
+                                <img class="project-image" src="/icons/2-pic-project.png">
+                                <div class="project-image-on-hover">
+                                    <h3 class="project-image-text-inside">Visit the site</h3>
+                                </div>
+                            </a>
+                            <div class="project-info">
+                                <span class="project-name">Shopper</span>
+                                <span class="project-author">by RealCryZed</span>
+                            </div>
+                        </div>
+                        <!-- 3 project -->
+                        <div class="single-project">
+                            <a class="project-photo-link" href="www.youtube.com">
+                                <img class="project-image" src="/icons/2-pic-project.png">
+                                <div class="project-image-on-hover">
+                                    <h3 class="project-image-text-inside">Visit the site</h3>
+                                </div>
+                            </a>
+                            <div class="project-info">
+                                <span class="project-name">......</span>
+                                <span class="project-author">by RealCryZed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        // function getDocHeight() {
-        //     var D = document;
-        //     return Math.max(
-        //         D.body.scrollHeight, D.documentElement.scrollHeight,
-        //         D.body.offsetHeight, D.documentElement.offsetHeight,
-        //         D.body.clientHeight, D.documentElement.clientHeight
-        //     );
-        // }
-
         window.addEventListener("scroll", function() {
             if (window.scrollY != 0) {
                 document.getElementById('navbar-id').classList.remove('moved-navbar-off');
@@ -73,6 +112,22 @@
         });
     </script>
     <script>
+        function openNavbarMenu() {
+            document.getElementById('navbar-id').classList.remove('moved-navbar-off');
+            document.getElementById('navbar-id').classList.add('moved-navbar');
+
+            document.getElementById('navbar-menu-button-wrapper-id').classList.add('button-off');
+            document.getElementById('navbar-menu-button-id').onclick = function() { closeNavbarMenu() }
+        }
+
+        // function closeNavbarMenu() {
+        //     document.getElementById('navbar-id').classList.remove('moved-navbar');
+        //     document.getElementById('navbar-id').classList.add('moved-navbar-off');
+        //
+        //     document.getElementById('navbar-menu-button-wrapper-id').classList.remove('button-off');
+        //     document.getElementById('navbar-menu-button-id').onclick = function() { openNavbarMenu() }
+        // }
+
         function scrollToStart() {
             var element = document.getElementById("wrapper-id");
             element.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
