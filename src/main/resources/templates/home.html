@@ -41,14 +41,40 @@
             </div>
 
             <div id="about-me-wrapper-id" class="about-me-wrapper">
-                <h1 class="about-me-header">About me</h1>
+                <div class="about-me-subcontainer">
+                    <h1 class="about-me-header">About me</h1>
+                    <div class="about-me-container">
+                        <div class="left-about-me-wrapper">
+                            <img class="left-about-me-image" src="/icons/my-info.png">
+                            <h3 style="margin-top: -9px;">About me</h3>
+                            <div class="border-about-me"></div>
+                            <p class="about-me-text">I'm 17 years old Java Programmer, based in Omsk, Russia. I'm driven by ambition, a desire to develop and get new skills.</p>
+                        </div>
 
-                <p class="about-me-text">I'm 17 years old Java Programmer, based in Omsk, Russia.</p>
-                <p class="about-me-subtext">I am driven by ambition , a desire to develop and get new skills.</p>
+                        <div class="right-about-me-wrapper">
+                            <img class="right-about-me-image" src="/icons/my-skills.png">
+                            <h3 style="margin-top: 2px;">My skills</h3>
+                            <div class="skills-container">
+                                <div class="left-skills-container">
+                                    <h5 class="skill-name">Java</h5>
+                                    <h5 class="skill-name">PostgreSQL</h5>
+                                    <h5 class="skill-name">MongoDb</h5>
+                                    <h5 class="skill-name">Spring Framework</h5>
+                                </div>
+                                <div class="border-skills"></div>
+                                <div class="right-skills-container">
+                                    <h5 class="skill-name">Java</h5>
+                                    <h5 class="skill-name">PostgreSQL</h5>
+                                    <h5 class="skill-name">MongoDb</h5>
+                                    <h5 class="skill-name">Spring Framework</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="my-projects-wrapper-id" class="my-projects-wrapper">
-                <!--                <div class="img-inside-my-projects"></div>-->
                 <img src="icons/photo-1455476915919-2b028d0a1230.jpg" style="width:100%;opacity: 0.05;max-height: 600px;">
 
 
@@ -65,7 +91,14 @@
                             </a>
                             <div class="project-info">
                                 <span class="project-name">Counter-Strike TV</span>
-                                <span class="project-author">by RealCryZed</span>
+                                <div class="border-project"></div>
+                                <div class="project-tools">
+                                    <span class="project-single-tool">Java 12</span>
+                                    <span class="project-single-tool">Spring Framework</span>
+                                    <span class="project-single-tool">MongoDb & PostgreSQL</span>
+                                    <span class="project-single-tool">Caffeine Cache</span>
+                                    <span class="project-single-tool">Lombok</span>
+                                </div>
                             </div>
                         </div>
                         <!-- 2 project -->
@@ -78,12 +111,18 @@
                             </a>
                             <div class="project-info">
                                 <span class="project-name">Shopper</span>
-                                <span class="project-author">by RealCryZed</span>
+                                <div class="border-project"></div>
+                                <div class="project-tools">
+                                    <span class="project-single-tool">Java 12</span>
+                                    <span class="project-single-tool">Spring Framework</span>
+                                    <span class="project-single-tool">PostgreSQL</span>
+                                    <span class="project-single-tool">Lombok</span>
+                                </div>
                             </div>
                         </div>
                         <!-- 3 project -->
                         <div class="single-project">
-                            <a class="project-photo-link" href="www.youtube.com">
+                            <a class="project-photo-link" href="#">
                                 <img class="project-image" src="/icons/2-pic-project.png">
                                 <div class="project-image-on-hover">
                                     <h3 class="project-image-text-inside">Visit the site</h3>
@@ -91,7 +130,13 @@
                             </a>
                             <div class="project-info">
                                 <span class="project-name">......</span>
-                                <span class="project-author">by RealCryZed</span>
+                                <div class="border-project"></div>
+                                <div class="project-tools">
+                                    <span class="project-single-tool">..........</span>
+                                    <span class="project-single-tool">..........</span>
+                                    <span class="project-single-tool">..........</span>
+                                    <span class="project-single-tool">..........</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -119,14 +164,6 @@
             document.getElementById('navbar-menu-button-wrapper-id').classList.add('button-off');
             document.getElementById('navbar-menu-button-id').onclick = function() { closeNavbarMenu() }
         }
-
-        // function closeNavbarMenu() {
-        //     document.getElementById('navbar-id').classList.remove('moved-navbar');
-        //     document.getElementById('navbar-id').classList.add('moved-navbar-off');
-        //
-        //     document.getElementById('navbar-menu-button-wrapper-id').classList.remove('button-off');
-        //     document.getElementById('navbar-menu-button-id').onclick = function() { openNavbarMenu() }
-        // }
 
         function scrollToStart() {
             var element = document.getElementById("wrapper-id");
