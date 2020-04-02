@@ -17,6 +17,28 @@
         top: 850px;
     }
 
+    .about-me-container {
+        display: flex;
+    }
+
+    .left-about-me-wrapper {
+        min-width: 500px;
+        max-width: 500px;
+    }
+
+    .about-me-text {
+        font-size: 20px;
+    }
+
+    .right-about-me-wrapper {
+        min-width: 500px;
+        font-size: 16px;
+    }
+
+    .border-skills {
+        margin: 0 40px;
+    }
+
     .single-project {
         margin: 15px;
     }
@@ -47,12 +69,19 @@
         font-size: 18px;
     }
 
-    .some-words-my-projects {
-        top: 1000px;
+    .some-words-about-me {
         width: 1152px;
-        margin: 0 auto;
-        left: 50%;
-        transform: translate(-50%, 0%);
+        font-size: 16px;
+    }
+
+    .some-words-my-projects {
+        top: 700px;
+        width: 1152px;
+        font-size: 16px;
+    }
+
+    .subwords-my-projects {
+        padding: 40px 0;
     }
 }
 
@@ -71,6 +100,28 @@
 
     .button-to-about-me-wrapper {
         top: 550px;
+    }
+
+    .about-me-container {
+        display: flex;
+    }
+
+    .left-about-me-wrapper {
+        min-width: 400px;
+        max-width: 400px;
+    }
+
+    .about-me-text {
+        font-size: 20px;
+    }
+
+    .right-about-me-wrapper {
+        min-width: 400px;
+        font-size: 16px;
+    }
+
+    .border-skills {
+        margin: 0 25px;
     }
 
     .single-project {
@@ -102,6 +153,21 @@
     .project-single-tool {
         font-size: 16px;
     }
+
+    .some-words-about-me {
+        width: 960px;
+        font-size: 15px;
+    }
+
+    .some-words-my-projects {
+        top: 700px;
+        width: 960px;
+        font-size: 15px;
+    }
+
+    .subwords-my-projects {
+        padding: 40px 0;
+    }
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 801px) {
@@ -119,6 +185,28 @@
 
     .button-to-about-me-wrapper {
         top: 400px;
+    }
+
+    .about-me-container {
+        display: flex;
+    }
+
+    .left-about-me-wrapper {
+        min-width: 330px;
+        max-width: 330px;
+    }
+
+    .about-me-text {
+        font-size: 16px;
+    }
+
+    .right-about-me-wrapper {
+        min-width: 330px;
+        font-size: 14px;
+    }
+
+    .border-skills {
+        margin: 0 15px;
     }
 
     .single-project {
@@ -150,6 +238,21 @@
     .project-single-tool {
         font-size: 10px;
     }
+
+    .some-words-about-me {
+        width: 660px;
+        font-size: 12px;
+    }
+
+    .some-words-my-projects {
+        top: 550px;
+        width: 660px;
+        font-size: 12px;
+    }
+
+    .subwords-my-projects {
+        padding: 30px 0;
+    }
 }
 
 @media only screen and (max-width: 800px) and (min-width: 601px) {
@@ -169,8 +272,30 @@
         top: 400px;
     }
 
+    .about-me-container {
+        display: block;
+    }
+
+    .left-about-me-wrapper {
+        min-width: 330px;
+        max-width: 330px;
+    }
+
+    .about-me-text {
+        font-size: 16px;
+    }
+
+    .right-about-me-wrapper {
+        min-width: 330px;
+        font-size: 14px;
+    }
+
+    .border-skills {
+        margin: 0 10px;
+    }
+
     .single-project {
-        margin: 15px;
+        margin: 5px;
     }
 
     .project-image {
@@ -198,6 +323,21 @@
     .project-single-tool {
         font-size: 8px;
     }
+
+    .some-words-about-me {
+        width: 540px;
+        font-size: 10px;
+    }
+
+    .some-words-my-projects {
+        top: 500px;
+        width: 540px;
+        font-size: 10px;
+    }
+
+    .subwords-my-projects {
+        padding: 24px 0;
+    }
 }
 
 @media only screen and (max-width: 600px) and (min-width: 400px)  {
@@ -217,8 +357,16 @@
         top: 200px;
     }
 
+    .about-me-container {
+        display: block;
+    }
+
+    .left-about-me-wrapper {
+        margin-bottom: 100px;
+    }
+
     .single-project {
-        margin: 15px;
+        margin: 5px;
     }
 
     .project-image {
@@ -245,6 +393,21 @@
 
     .project-single-tool {
         font-size: 6px;
+    }
+
+    .some-words-about-me {
+        width: 380px;
+        font-size: 8px;
+    }
+
+    .some-words-my-projects {
+        top: 420px;
+        width: 380px;
+        font-size: 8px;
+    }
+
+    .subwords-my-projects {
+        padding: 18px 0;
     }
 }
 
@@ -398,11 +561,8 @@ h5.validationError {
     bottom: 0;
     background: #ffffff;
     height: 2px;
-    /*-webkit-transition-property: left, right;*/
     transition-property: left, right;
-    /*-webkit-transition-duration: 0.5s;*/
     transition-duration: 0.5s;
-    /*-webkit-transition-timing-function: ease-out;*/
     transition-timing-function: ease-out;
 }
 
@@ -486,7 +646,7 @@ h5.validationError {
 }
 
 .about-me-container {
-    display: flex;
+    /*display: flex;*/
     margin: 0 auto;
 }
 
@@ -495,8 +655,8 @@ h5.validationError {
     display: grid;
     grid-template-rows: max-content;
     place-items: center;
-    min-width: 500px;
-    max-width: 500px;
+    /*min-width: 500px;*/
+    /*max-width: 500px;*/
     height: 300px;
     border-radius: 35px;
     box-shadow: 0 4px 15px 0 rgba(50,50,50,0.6)
@@ -519,7 +679,7 @@ h5.validationError {
     margin-top: -125px;
     padding: 0px 45px;
     font-family: Yantramanav;
-    font-size: 20px;
+    /*font-size: 20px;*/
     text-align: center;
     color: black;
 }
@@ -534,7 +694,7 @@ h5.validationError {
     display: grid;
     grid-template-rows: max-content;
     place-items: center;
-    min-width: 500px;
+    /*min-width: 500px;*/
     height: 300px;
     border-radius: 35px;
     box-shadow: 0 4px 15px 0 rgba(50,50,50,0.6)
@@ -552,7 +712,7 @@ h5.validationError {
 
 .border-skills {
     border: 1px solid #29672b;
-    margin: 0 40px;
+    /*margin: 0 40px;*/
 }
 
 .skill-name {
@@ -564,7 +724,7 @@ h5.validationError {
 }
 
 .some-words-about-me {
-    width: 1152px;
+    /*width: 1152px;*/
     margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -589,7 +749,7 @@ h5.validationError {
 .my-projects-wrapper {
     /*background-color: #0083aa;*/
     /*background-color: #365475;*/
-    background-color: #444957;
+    background-color: #5b5e67;
     min-height: 1800px;
     position: relative;
 }
@@ -615,8 +775,11 @@ h5.validationError {
 
 .break-between-projects {
     display: flex;
-    height: 64px;
-    margin: 25px 0;
+    width: 33%;
+    border-bottom: 1px solid #b1b1b1;
+    margin: 0 auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 .single-project {
@@ -697,8 +860,6 @@ h5.validationError {
 
 .some-words-my-projects {
     position: absolute;
-    top: 700px;
-    width: 1152px;
     margin: 0 auto;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -707,7 +868,6 @@ h5.validationError {
 }
 
 .subwords-my-projects {
-    padding: 40px 0;
     text-align: center;
     color: white;
 }
