@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Lobster|Roboto+Mono|Montserrat|Yantramanav|Spicy+Rice&display=swap');
 
 @media only screen and (min-width: 1367px) {
+    .container-photo {
+        min-height: 650px;
+    }
+
     .main-image-carrier {
         min-height: 1000px;
     }
@@ -37,6 +41,10 @@
 
     .border-skills {
         margin: 0 40px;
+    }
+
+    .my-projects-wrapper {
+        min-height: 920px;
     }
 
     .project-wrapper {
@@ -98,6 +106,10 @@
 }
 
 @media only screen and (max-width: 1366px) and (min-width: 1025px) {
+    .container-photo {
+        min-height: 650px;
+    }
+
     .main-image-carrier {
         min-height: 650px;
     }
@@ -134,6 +146,10 @@
 
     .border-skills {
         margin: 0 25px;
+    }
+
+    .my-projects-wrapper {
+        min-height: 920px;
     }
 
     .project-wrapper {
@@ -195,6 +211,10 @@
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 801px) {
+    .container-photo {
+        min-height: 500px;
+    }
+
     .main-image-carrier {
         min-height: 500px;
     }
@@ -231,6 +251,10 @@
 
     .border-skills {
         margin: 0 15px;
+    }
+
+    .my-projects-wrapper {
+        min-height: 775px;
     }
 
     .project-wrapper {
@@ -292,6 +316,10 @@
 }
 
 @media only screen and (max-width: 800px) and (min-width: 601px) {
+    .container-photo {
+        min-height: 500px;
+    }
+
     .main-image-carrier {
         min-height: 500px;
     }
@@ -328,6 +356,10 @@
 
     .border-skills {
         margin: 0 10px;
+    }
+
+    .my-projects-wrapper {
+        min-height: 1480px;
     }
 
     .project-wrapper {
@@ -389,8 +421,12 @@
 }
 
 @media only screen and (max-width: 600px) and (min-width: 400px)  {
+    .container-photo {
+        min-height: 450px;
+    }
+
     .main-image-carrier {
-        min-height: 300px;
+        min-height: 450px;
     }
 
     .logo-inside-name {
@@ -402,7 +438,7 @@
     }
 
     .button-to-about-me-wrapper {
-        top: 200px;
+        top: 350px;
     }
 
     .about-me-container {
@@ -410,7 +446,25 @@
     }
 
     .left-about-me-wrapper {
-        margin-bottom: 100px;
+        min-width: 330px;
+        max-width: 330px;
+    }
+
+    .border-skills {
+        margin: 0 10px;
+    }
+
+    .about-me-text {
+        font-size: 14px;
+    }
+
+    .right-about-me-wrapper {
+        min-width: 330px;
+        font-size: 14px;
+    }
+
+    .my-projects-wrapper {
+        min-height: 1330px;
     }
 
     .project-wrapper {
@@ -636,7 +690,7 @@ h5.validationError {
  */
 
 .container-photo {
-    min-height: 650px;
+    /*min-height: 650px;*/
     width: 100%;
     margin: 0;
     padding: 0;
@@ -811,7 +865,7 @@ h5.validationError {
     /*background-color: #0083aa;*/
     /*background-color: #365475;*/
     background-color: #5b5e67;
-    min-height: 920px;
+    /*min-height: 920px;*/
     position: relative;
 }
 
@@ -942,6 +996,7 @@ h5.validationError {
 }
 
 .contact-me-wrapper {
+    padding: 80px 0;
     display: flex;
     background-color: #364347;
 }
@@ -959,6 +1014,7 @@ h5.validationError {
 
 .socials {
     display: flex;
+    margin-top: 50px;
 }
 
 .socials-wrap {
