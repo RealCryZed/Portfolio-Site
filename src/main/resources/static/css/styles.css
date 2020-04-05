@@ -103,6 +103,14 @@
     .subwords-my-projects {
         padding: 40px 0;
     }
+
+    .contact-me-wrapper {
+        padding: 100px 0;
+    }
+
+    .socials {
+        margin-top: 50px;
+    }
 }
 
 @media only screen and (max-width: 1366px) and (min-width: 1025px) {
@@ -207,6 +215,14 @@
 
     .subwords-my-projects {
         padding: 40px 0;
+    }
+
+    .contact-me-wrapper {
+        padding: 80px 0;
+    }
+
+    .socials {
+        margin-top: 50px;
     }
 }
 
@@ -313,6 +329,14 @@
     .subwords-my-projects {
         padding: 30px 0;
     }
+
+    .contact-me-wrapper {
+        padding: 70px 0;
+    }
+
+    .socials {
+        margin-top: 50px;
+    }
 }
 
 @media only screen and (max-width: 800px) and (min-width: 601px) {
@@ -418,6 +442,14 @@
     .subwords-my-projects {
         padding: 24px 0;
     }
+
+    .contact-me-wrapper {
+        padding: 78px 0;
+    }
+
+    .socials {
+        margin-top: 30px;
+    }
 }
 
 @media only screen and (max-width: 600px) and (min-width: 400px)  {
@@ -522,6 +554,14 @@
 
     .subwords-my-projects {
         padding: 18px 0;
+    }
+
+    .contact-me-wrapper {
+        padding: 52px 0;
+    }
+
+    .socials {
+        margin-top: 20px;
     }
 }
 
@@ -992,11 +1032,15 @@ h5.validationError {
 
 .subwords-my-projects {
     text-align: center;
-    color: white;
+    color: #dbe1f3;
 }
 
+/*
+ *  CONTACT ME block
+ */
+
 .contact-me-wrapper {
-    padding: 80px 0;
+    /*padding: 80px 0;*/
     display: flex;
     background-color: #364347;
 }
@@ -1014,7 +1058,7 @@ h5.validationError {
 
 .socials {
     display: flex;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
 }
 
 .socials-wrap {
