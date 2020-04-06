@@ -13,7 +13,7 @@
         <div class="container-photo">
             <div class="main-image-carrier"></div>
             <h1 class="logo-inside-name">Igor Petrov</h1>
-            <h3 class="logo-inside-text" id="logo-inside-text-id">Russia-based Java Software Engineer</h3>
+            <h3 class="logo-inside-text" id="logo-inside-text-id">Russia-based Java Software Developer</h3>
 
             <div class="button-to-about-me-wrapper">
                 <button class="button-to-about-me" th:href="@{/}" onclick="scrollToAboutMe();">
@@ -23,13 +23,13 @@
             </div>
         </div>
         <div class="front-page-wrapper">
-<!--            <div id="navbar-menu-button-wrapper-id" class="navbar-menu-button-wrapper">-->
-<!--                <button id="navbar-menu-button-id" class="navbar-menu-button" onclick="openNavbarMenu();">-->
-<!--                    &lt;!&ndash; This Icon from www.flaticon.com&ndash;&gt;-->
-<!--                    <img width="40px" height="40px" th:src="@{icons/menu.png}"/>-->
-<!--                </button>-->
-<!--            </div>-->
-            <div id="navbar-id" class="navbar moved-navbar-off">
+            <div id="navbar-menu-button-wrapper-id" class="navbar-menu-button-wrapper">
+                <button id="navbar-menu-button-id" class="navbar-menu-button" onclick="openNavbarMenu();">
+                    <!-- This Icon from www.flaticon.com-->
+                    <img width="40px" height="40px" th:src="@{icons/menu.png}"/>
+                </button>
+            </div>
+            <div id="navbar-id" class="navbar navbar-off">
                 <nav class="navcon">
                     <div class="navbar-block">
                         <button onclick="scrollToStart();" class="navbar-link navbar-link-home">HOME</button>
@@ -251,22 +251,39 @@
 
     <script>
         window.addEventListener("scroll", function() {
-            if (window.scrollY != 0) {
-                document.getElementById('navbar-id').classList.remove('moved-navbar-off');
-                document.getElementById('navbar-id').classList.add('moved-navbar');
-            } else {
-                document.getElementById('navbar-id').classList.remove('moved-navbar');
-                document.getElementById('navbar-id').classList.add('moved-navbar-off');
+            //Working with bugs
+            if (window.scrollY != 0 && window.screen.width * window.devicePixelRatio < 2390) {
+                document.getElementById('navbar-id').classList.remove('navbar-off');
+                document.getElementById('navbar-id').classList.add('navbar-on');
+                document.getElementById('navbar-id').classList.add('navbar-shadow');
+                document.getElementById('navbar-menu-button-id').onclick = function() { openNavbarMenu() }
+            } else if (window.scrollY == 0 && window.screen.width * window.devicePixelRatio < 2390) {
+                document.getElementById('navbar-id').classList.remove('navbar-on');
+                document.getElementById('navbar-id').classList.remove('navbar-shadow');
+                document.getElementById('navbar-id').classList.add('navbar-off');
+            } else if (window.scrollY != 0) {
+                document.getElementById('navbar-id').classList.add('navbar-shadow');
+            } else if (window.scrollY == 0) {
+                document.getElementById('navbar-id').classList.remove('navbar-shadow');
             }
         });
     </script>
     <script>
         function openNavbarMenu() {
-            document.getElementById('navbar-id').classList.remove('moved-navbar-off');
-            document.getElementById('navbar-id').classList.add('moved-navbar');
+            document.getElementById('navbar-id').classList.remove('navbar-off');
+            document.getElementById('navbar-id').classList.add('navbar-on');
+            console.log(window.screen.width * window.devicePixelRatio);
 
             document.getElementById('navbar-menu-button-wrapper-id').classList.add('button-off');
             document.getElementById('navbar-menu-button-id').onclick = function() { closeNavbarMenu() }
+        }
+
+        function closeNavbarMenu() {
+            document.getElementById('navbar-id').classList.remove('navbar-on');
+            document.getElementById('navbar-id').classList.remove('navbar-shadow');
+            document.getElementById('navbar-id').classList.add('navbar-off');
+
+            document.getElementById('navbar-menu-button-id').onclick = function() { openNavbarMenu() }
         }
 
         function scrollToStart() {

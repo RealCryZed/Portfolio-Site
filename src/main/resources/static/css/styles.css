@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Lobster|Roboto+Mono|Montserrat|Yantramanav|Spicy+Rice&display=swap');
 
 @media only screen and (min-width: 1367px) {
+    #navbar-id {
+        top: 0;
+        opacity: 1;
+    }
+
+    .navbar-menu-button {
+        top: -50px;
+        opacity: 0;
+    }
+
     .container-photo {
         min-height: 650px;
     }
@@ -49,6 +59,7 @@
 
     .project-wrapper {
         display: flex;
+        margin: 0 60px;
     }
 
     .break-between-projects {
@@ -114,6 +125,16 @@
 }
 
 @media only screen and (max-width: 1366px) and (min-width: 1025px) {
+    #navbar-id {
+        top: 0;
+        opacity: 1;
+    }
+
+    .navbar-menu-button {
+        top: -50px;
+        opacity: 0;
+    }
+
     .container-photo {
         min-height: 650px;
     }
@@ -162,6 +183,7 @@
 
     .project-wrapper {
         display: flex;
+        margin: 0 25px;
     }
 
     .break-between-projects {
@@ -227,6 +249,16 @@
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 801px) {
+    #navbar-id {
+        top: 0;
+        opacity: 1;
+    }
+
+    .navbar-menu-button {
+        top: -50px;
+        opacity: 0;
+    }
+
     .container-photo {
         min-height: 500px;
     }
@@ -275,6 +307,7 @@
 
     .project-wrapper {
         display: flex;
+        margin: 0 25px;
     }
 
     .break-between-projects {
@@ -340,6 +373,16 @@
 }
 
 @media only screen and (max-width: 800px) and (min-width: 601px) {
+    #navbar-id {
+        top: -50px;
+        opacity: 0;
+    }
+
+    .navbar-menu-button {
+        top: 4px;
+        opacity: 1;
+    }
+
     .container-photo {
         min-height: 500px;
     }
@@ -388,6 +431,7 @@
 
     .project-wrapper {
         display: block;
+        margin: 0 25px;
     }
 
     .break-between-projects {
@@ -453,6 +497,16 @@
 }
 
 @media only screen and (max-width: 600px) and (min-width: 400px)  {
+    #navbar-id {
+        top: -50px;
+        opacity: 0;
+    }
+
+    .navbar-menu-button {
+        top: 4px;
+        opacity: 1;
+    }
+
     .container-photo {
         min-height: 450px;
     }
@@ -501,6 +555,7 @@
 
     .project-wrapper {
         display: block;
+        margin: 0 25px;
     }
 
     .break-between-projects {
@@ -659,33 +714,39 @@ h5.validationError {
 .navbar-menu-button {
     position: fixed;
     z-index: 99999999999;
-    top: 4px;
+    /*top: 4px;*/
     right: 40px;
     transition: 0.5s ease-in-out;
 }
 
 .navbar {
-    /*background-color: #ca1122e6;*/
     position: fixed;
-    top: 0;
+    /*top: 0;*/
     width: 100%;
     z-index: 999;
     min-height: 50px;
     line-height: 50px;
-    box-shadow: 0 3px 5px 0 rgba(50,50,50,.4);
+    /*box-shadow: 0 3px 5px 0 rgba(50,50,50,.4);*/
     transition: opacity 0.3s 0.3s;
 }
 
-.moved-navbar {
-    background: rgb(8, 8, 8, 0.6);
+.navbar-on {
+    opacity: 1 !important;
+    top: 0 !important;
+    /*background: rgb(8, 8, 8, 0.6);*/
     transition: 1s ease-in-out;
 }
 
-.moved-navbar-off {
+.navbar-off {
     opacity: 1;
     box-shadow: unset;
     background-color: transparent;
     transition: 0.5s ease-in-out;
+}
+
+.navbar-shadow {
+    background: rgb(8, 8, 8, 0.6);
+    box-shadow: 0 3px 5px 0 rgba(50,50,50,.4);
 }
 
 .navbar-block {
@@ -730,7 +791,6 @@ h5.validationError {
  */
 
 .container-photo {
-    /*min-height: 650px;*/
     width: 100%;
     margin: 0;
     padding: 0;
@@ -752,7 +812,6 @@ h5.validationError {
     position: absolute;
     width: 100%;
     text-align: center;
-    /*color: #ca1122e6;*/
     color: white;
     font-size: 70px;
     font-weight: 100;
@@ -793,7 +852,6 @@ h5.validationError {
 
 .about-me-header, .my-projects-header {
     padding: 75px 0;
-    /*font-family: Fjalla one;*/
     font-family: Montserrat;
     font-size: 40px;
     text-align: center;
@@ -801,7 +859,6 @@ h5.validationError {
 }
 
 .about-me-container {
-    /*display: flex;*/
     margin: 0 auto;
 }
 
@@ -810,8 +867,6 @@ h5.validationError {
     display: grid;
     grid-template-rows: max-content;
     place-items: center;
-    /*min-width: 500px;*/
-    /*max-width: 500px;*/
     height: 300px;
     border-radius: 35px;
     box-shadow: 0 4px 15px 0 rgba(50,50,50,0.6)
@@ -834,7 +889,6 @@ h5.validationError {
     margin-top: -125px;
     padding: 0px 45px;
     font-family: Yantramanav;
-    /*font-size: 20px;*/
     text-align: center;
     color: black;
 }
@@ -849,7 +903,6 @@ h5.validationError {
     display: grid;
     grid-template-rows: max-content;
     place-items: center;
-    /*min-width: 500px;*/
     height: 300px;
     border-radius: 35px;
     box-shadow: 0 4px 15px 0 rgba(50,50,50,0.6)
@@ -867,7 +920,6 @@ h5.validationError {
 
 .border-skills {
     border: 1px solid #29672b;
-    /*margin: 0 40px;*/
 }
 
 .skill-name {
@@ -879,7 +931,6 @@ h5.validationError {
 }
 
 .some-words-about-me {
-    /*width: 1152px;*/
     margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -902,10 +953,7 @@ h5.validationError {
  */
 
 .my-projects-wrapper {
-    /*background-color: #0083aa;*/
-    /*background-color: #365475;*/
     background-color: #5b5e67;
-    /*min-height: 920px;*/
     position: relative;
 }
 
@@ -916,20 +964,16 @@ h5.validationError {
 }
 
 .my-projects-list {
-    /*background-color: #ffae35;*/
-    /*border-radius: 10px;*/
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
 }
 
 .project-wrapper {
-    /*display: flex;*/
-    margin: 0 60px;
+
 }
 
 .break-between-projects {
-    /*display: flex;*/
     width: 33%;
     border-bottom: 1px solid #b1b1b1;
     margin: 0 auto;
@@ -954,8 +998,6 @@ h5.validationError {
     overflow: hidden;
     transition: 1s 1s;
     border-radius: 4px;
-    /*border-top-left-radius: 4px;*/
-    /*border-top-right-radius: 4px;*/
 }
 
 .project-photo-link:hover .project-image-on-hover {
@@ -980,8 +1022,6 @@ h5.validationError {
     opacity: 0;
     background-color: #4e1479;
     border-radius: 4px;
-    /*border-top-left-radius: 4px;*/
-    /*border-top-right-radius: 4px;*/
 }
 
 .project-image-text-inside {
@@ -1040,7 +1080,6 @@ h5.validationError {
  */
 
 .contact-me-wrapper {
-    /*padding: 80px 0;*/
     display: flex;
     background-color: #364347;
 }
@@ -1058,7 +1097,6 @@ h5.validationError {
 
 .socials {
     display: flex;
-    /*margin-top: 50px;*/
 }
 
 .socials-wrap {
