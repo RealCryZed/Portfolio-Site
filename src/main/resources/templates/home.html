@@ -24,9 +24,10 @@
         </div>
         <div class="front-page-wrapper">
             <div id="navbar-menu-button-wrapper-id" class="navbar-menu-button-wrapper">
-                <button id="navbar-menu-button-id" class="navbar-menu-button" onclick="openNavbarMenu();">
+                <button id="navbar-menu-button-id" class="navbar-menu-button rotated-close" onclick="openNavbarMenu();">
                     <!-- This Icon from www.flaticon.com-->
-                    <img width="40px" height="40px" th:src="@{icons/menu.png}"/>
+                    <img id="navbar-button-menu-id" class="navbar-btn-opened" width="32px" height="32px" th:src="@{icons/menu.png}"/>
+                    <img id="navbar-button-close-id" class="navbar-btn-closed" width="32px" height="32px" th:src="@{icons/close.png}"/>
                 </button>
             </div>
             <div id="navbar-id" class="navbar navbar-off">
@@ -275,6 +276,17 @@
             console.log(window.screen.width * window.devicePixelRatio);
 
             document.getElementById('navbar-menu-button-wrapper-id').classList.add('button-off');
+
+
+            document.getElementById('navbar-menu-button-id').classList.remove('rotated-close');
+            document.getElementById('navbar-menu-button-id').classList.add('rotated-open');
+
+            document.getElementById('navbar-button-menu-id').classList.remove('navbar-btn-opened');
+            document.getElementById('navbar-button-menu-id').classList.add('navbar-btn-closed');
+
+            document.getElementById('navbar-button-close-id').classList.remove('navbar-btn-closed');
+            document.getElementById('navbar-button-close-id').classList.add('navbar-btn-opened');
+
             document.getElementById('navbar-menu-button-id').onclick = function() { closeNavbarMenu() }
         }
 
@@ -282,6 +294,15 @@
             document.getElementById('navbar-id').classList.remove('navbar-on');
             document.getElementById('navbar-id').classList.remove('navbar-shadow');
             document.getElementById('navbar-id').classList.add('navbar-off');
+
+            document.getElementById('navbar-menu-button-id').classList.remove('rotated-open');
+            document.getElementById('navbar-menu-button-id').classList.add('rotated-close');
+
+            document.getElementById('navbar-button-menu-id').classList.remove('navbar-btn-closed');
+            document.getElementById('navbar-button-menu-id').classList.add('navbar-btn-opened');
+
+            document.getElementById('navbar-button-menu-id').classList.remove('navbar-btn-opened');
+            document.getElementById('navbar-button-close-id').classList.add('navbar-btn-closed');
 
             document.getElementById('navbar-menu-button-id').onclick = function() { openNavbarMenu() }
         }
