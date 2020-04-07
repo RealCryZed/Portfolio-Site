@@ -35,6 +35,11 @@
         font-size: 30px;
     }
 
+    .logo-inside-text:after {
+        top: 53%;
+        height: 5%;
+    }
+
     .button-to-about-me-wrapper {
         top: 850px;
     }
@@ -164,6 +169,11 @@
     .logo-inside-text {
         top: 320px;
         font-size: 30px;
+    }
+
+    .logo-inside-text:after {
+        top: 55%;
+        height: 6%;
     }
 
     .button-to-about-me-wrapper {
@@ -297,6 +307,11 @@
         font-size: 20px;
     }
 
+    .logo-inside-text:after {
+        top: 53.5%;
+        height: 6%;
+    }
+
     .button-to-about-me-wrapper {
         top: 400px;
     }
@@ -426,6 +441,11 @@
     .logo-inside-text {
         top: 270px;
         font-size: 15px;
+    }
+
+    .logo-inside-text:after {
+        top: 52.4%;
+        height: 5%;
     }
 
     .button-to-about-me-wrapper {
@@ -559,6 +579,11 @@
         font-size: 15px;
     }
 
+    .logo-inside-text:after {
+        top: 53.5%;
+        height: 6.5%;
+    }
+
     .button-to-about-me-wrapper {
         top: 180px;
     }
@@ -655,6 +680,29 @@
         margin-top: 20px;
     }
 }
+
+/*
+    ANIMATION
+*/
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        background-color: transparent;
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+/* END OF ANIMATION */
+
 
 body {
     margin: 0;
@@ -902,6 +950,18 @@ h5.validationError {
     color: white;
     /*font-size: 30px;*/
     min-height: 39px;
+}
+
+.logo-inside-text:after {
+    content: "";
+    position: absolute;
+    /*top: 55%;*/
+    width: 1px;
+    /*height: 6%;*/
+    margin-left: 2px;
+    background: white;
+    color: white;
+    animation: pulse 1s infinite;
 }
 
 .button-to-about-me-wrapper {
