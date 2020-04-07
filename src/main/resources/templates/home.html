@@ -10,18 +10,6 @@
 </head>
 <body>
     <div id="wrapper-id" class="wrapper">
-        <div class="container-photo">
-            <div class="main-image-carrier"></div>
-            <h1 class="logo-inside-name">Igor Petrov</h1>
-            <h3 class="logo-inside-text" id="logo-inside-text-id">Russia-based Java Software Developer</h3>
-
-            <div class="button-to-about-me-wrapper">
-                <button class="button-to-about-me" th:href="@{/}" onclick="scrollToAboutMe();">
-                    <!-- This Icon from www.flaticon.com-->
-                    <img th:src="@{icons/down-arrow.png}"/>
-                </button>
-            </div>
-        </div>
         <div class="front-page-wrapper">
             <div id="navbar-menu-button-wrapper-id" class="navbar-menu-button-wrapper">
                 <button id="navbar-menu-button-id" class="navbar-menu-button rotated-close" onclick="openNavbarMenu();">
@@ -39,6 +27,33 @@
                         <button onclick="scrollToContactMe();" class="navbar-link">CONTACT</button>
                     </div>
                 </nav>
+            </div>
+
+<!--            <div class="container-photo">-->
+<!--                <div class="main-image-carrier"></div>-->
+<!--                <h1 class="logo-inside-name">Igor Petrov</h1>-->
+<!--                <h3 class="logo-inside-text" id="logo-inside-text-id">Russia-based Java Software Developer</h3>-->
+
+<!--                <div class="button-to-about-me-wrapper">-->
+<!--                    <button class="button-to-about-me" th:href="@{/}" onclick="scrollToAboutMe();">-->
+<!--                        &lt;!&ndash; This Icon from www.flaticon.com&ndash;&gt;-->
+<!--                        <img th:src="@{icons/down-arrow.png}"/>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <div class="container-photo">
+                <div class="main-image-carrier">
+                    <h1 class="logo-inside-name">Igor Petrov</h1>
+                    <h3 class="logo-inside-text" id="logo-inside-text-id">Russia-based Java Software Developer</h3>
+                </div>
+
+                <div class="button-to-about-me-wrapper">
+                    <button class="button-to-about-me" th:href="@{/}" onclick="scrollToAboutMe();">
+                        <!-- This Icon from www.flaticon.com-->
+                        <img th:src="@{icons/down-arrow.png}"/>
+                    </button>
+                </div>
             </div>
 
             <div id="about-me-wrapper-id" class="about-me-wrapper">

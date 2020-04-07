@@ -12,19 +12,27 @@
     }
 
     .container-photo {
-        min-height: 650px;
+        min-height: 950px;
+    }
+
+    .container-photo:before {
+        min-height: 950px;
+        max-height: 950px;
     }
 
     .main-image-carrier {
-        min-height: 1000px;
+        /*min-height: 1000px;*/
+        padding: 340px 0;
     }
 
     .logo-inside-name {
         top: 370px;
+        font-size: 70px;
     }
 
     .logo-inside-text {
         top: 470px;
+        font-size: 30px;
     }
 
     .button-to-about-me-wrapper {
@@ -139,16 +147,23 @@
         min-height: 650px;
     }
 
-    .main-image-carrier {
+    .container-photo:before {
         min-height: 650px;
+    }
+
+    .main-image-carrier {
+        /*min-height: 650px;*/
+        padding: 210px 0;
     }
 
     .logo-inside-name {
         top: 220px;
+        font-size: 70px;
     }
 
     .logo-inside-text {
         top: 320px;
+        font-size: 30px;
     }
 
     .button-to-about-me-wrapper {
@@ -263,16 +278,23 @@
         min-height: 500px;
     }
 
-    .main-image-carrier {
+    .container-photo:before {
         min-height: 500px;
+    }
+
+    .main-image-carrier {
+        /*min-height: 500px;*/
+        padding: 150px 0;
     }
 
     .logo-inside-name {
         top: 170px;
+        font-size: 50px;
     }
 
     .logo-inside-text {
         top: 270px;
+        font-size: 20px;
     }
 
     .button-to-about-me-wrapper {
@@ -384,23 +406,30 @@
     }
 
     .container-photo {
-        min-height: 500px;
+        min-height: 400px;
+    }
+
+    .container-photo:before {
+        min-height: 400px;
     }
 
     .main-image-carrier {
-        min-height: 500px;
+        /*min-height: 500px;*/
+        padding: 120px 0;
     }
 
     .logo-inside-name {
         top: 170px;
+        font-size: 40px;
     }
 
     .logo-inside-text {
         top: 270px;
+        font-size: 15px;
     }
 
     .button-to-about-me-wrapper {
-        top: 400px;
+        top: 280px;
     }
 
     .about-me-container {
@@ -498,7 +527,7 @@
 
 @media only screen and (max-width: 600px) and (min-width: 400px)  {
     #navbar-id {
-        top: -50px;
+        top: -100px;
         opacity: 0;
     }
 
@@ -508,23 +537,30 @@
     }
 
     .container-photo {
-        min-height: 450px;
+        min-height: 300px;
+    }
+
+    .container-photo:before {
+        min-height: 300px;
     }
 
     .main-image-carrier {
-        min-height: 450px;
+        /*min-height: 450px;*/
+        padding: 75px 0;
     }
 
     .logo-inside-name {
         top: 120px;
+        font-size: 40px;
     }
 
     .logo-inside-text {
         top: 220px;
+        font-size: 15px;
     }
 
     .button-to-about-me-wrapper {
-        top: 350px;
+        top: 180px;
     }
 
     .about-me-container {
@@ -813,44 +849,65 @@ h5.validationError {
  */
 
 .container-photo {
+    /* Photo by Fabian Grohs on unsplash.com */
+    background-image: url("https://images.unsplash.com/photo-1508830524289-0adcbe822b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1422&q=80");
+    /*opacity: 0.3;*/
+    /*filter: blur(2px);*/
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #272627;
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
+.container-photo:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(150deg,rgba(56, 56, 56, 0.8),rgba(54,67,71,.5));
+}
+
 .main-image-carrier {
-    /* Photo by Fabian Grohs on unsplash.com */
-    background-image: url("https://images.unsplash.com/photo-1508830524289-0adcbe822b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1422&q=80");
-    opacity: 0.3;
-    filter: blur(2px);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: #272627;
+    position: relative;
+    /*!* Photo by Fabian Grohs on unsplash.com *!*/
+    /*background-image: url("https://images.unsplash.com/photo-1508830524289-0adcbe822b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1422&q=80");*/
+    /*opacity: 0.3;*/
+    /*filter: blur(2px);*/
+    /*background-size: cover;*/
+    /*background-position: center center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-color: #272627;*/
 }
 
 .logo-inside-name {
     font-family: Fjalla One;
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
     text-align: center;
     color: white;
-    font-size: 70px;
+    /*font-size: 70px;*/
     font-weight: 100;
 }
 
 .logo-inside-text {
     font-family: Roboto Mono;
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
     text-align: center;
     color: white;
-    font-size: 30px;
+    /*font-size: 30px;*/
+    min-height: 39px;
 }
 
 .button-to-about-me-wrapper {
     position: absolute;
     width: 100%;
+    margin-top: -20px;
     text-align: center;
 }
 
