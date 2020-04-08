@@ -6,9 +6,24 @@
         opacity: 1;
     }
 
+    .navbar {
+        min-height: 50px;
+        line-height: 50px;
+    }
+
     .navbar-menu-button {
         top: -50px;
+        right: 20px;
         opacity: 0;
+    }
+
+    .navbar-link {
+        font-size: 25px;
+    }
+
+    .navbar-image {
+        width: 32px;
+        height: 32px;
     }
 
     .container-photo {
@@ -143,9 +158,24 @@
         opacity: 1;
     }
 
+    .navbar {
+        min-height: 50px;
+        line-height: 50px;
+    }
+
     .navbar-menu-button {
         top: -50px;
+        right: 20px;
         opacity: 0;
+    }
+
+    .navbar-link {
+        font-size: 25px;
+    }
+
+    .navbar-image {
+        width: 32px;
+        height: 32px;
     }
 
     .container-photo {
@@ -279,9 +309,24 @@
         opacity: 1;
     }
 
+    .navbar {
+        min-height: 50px;
+        line-height: 50px;
+    }
+
     .navbar-menu-button {
         top: -50px;
+        right: 20px;
         opacity: 0;
+    }
+
+    .navbar-link {
+        font-size: 25px;
+    }
+
+    .navbar-image {
+        width: 32px;
+        height: 32px;
     }
 
     .container-photo {
@@ -415,9 +460,24 @@
         opacity: 0;
     }
 
+    .navbar {
+        min-height: 40px;
+        line-height: 40px;
+    }
+
     .navbar-menu-button {
         top: 6px;
+        right: 20px;
         opacity: 1;
+    }
+
+    .navbar-link {
+        font-size: 20px;
+    }
+
+    .navbar-image {
+        width: 24px;
+        height: 24px;
     }
 
     .container-photo {
@@ -551,9 +611,24 @@
         opacity: 0;
     }
 
+    .navbar {
+        min-height: 30px;
+        line-height: 30px;
+    }
+
     .navbar-menu-button {
         top: 6px;
+        right: 10px;
         opacity: 1;
+    }
+
+    .navbar-link {
+        font-size: 12px;
+    }
+
+    .navbar-image {
+        width: 16px;
+        height: 16px;
     }
 
     .container-photo {
@@ -796,7 +871,6 @@ h5.validationError {
     z-index: 99999999999;
     opacity: 0.7;
     max-height: 43px;
-    right: 20px;
     transition: 1s ease-in-out;
 }
 
@@ -830,8 +904,8 @@ h5.validationError {
     /*top: 0;*/
     width: 100%;
     z-index: 999;
-    min-height: 50px;
-    line-height: 50px;
+    /*min-height: 50px;*/
+    /*line-height: 50px;*/
     /*box-shadow: 0 3px 5px 0 rgba(50,50,50,.4);*/
     transition: opacity 0.3s 0.3s;
 }
@@ -862,7 +936,6 @@ h5.validationError {
 .navbar-link {
     color: white;
     margin-right: 15px;
-    font-size: 25px;
     display: inline-block;
     vertical-align: middle;
     transform: perspective(1px) translateZ(0);
