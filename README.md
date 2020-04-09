@@ -1,6 +1,6 @@
 # Portfolio site
 
-I built a one-page website that introduces my skills and shows my projects that I built.
+I built a one-page website that introduces my skills and shows my projects that I built. You can see it [here](https://cryzed.000webhostapp.com/)
 
 ## Built with
 
@@ -15,4 +15,4 @@ I built a one-page website that introduces my skills and shows my projects that 
 
 * Clone the repository using `git clone` and paste it in your terminal.
 * Run `mvn clean package` from the project directory
-* Run project using `java -jar target/myportfolio.jar`, then open a browser window and go to localhost:8080.
+* Run project using `java -jar target/myportfolio.jar`, then open a browser window and go to `localhost:8080`.
