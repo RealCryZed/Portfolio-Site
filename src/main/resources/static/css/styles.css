@@ -27,12 +27,12 @@
     }
 
     .container-photo {
-        min-height: 950px;
+        min-height: 970px;
     }
 
     .container-photo:before {
-        min-height: 950px;
-        max-height: 950px;
+        min-height: 970px;
+        max-height: 970px;
     }
 
     .main-image-carrier {
@@ -566,7 +566,7 @@
 
     .project-image-text-inside {
         font-size: 22px;
-        line-height: 130px;
+        line-height: 125px;
     }
 
     .project-name {

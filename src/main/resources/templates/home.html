@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Home page - RealCryZed</title>
-    <link type="text/css" rel="stylesheet" th:href="@{/css/styles.css}" />
+    <link type="text/css" rel="stylesheet" href="/css/styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
@@ -13,9 +12,9 @@
         <div class="front-page-wrapper">
             <div id="navbar-menu-button-wrapper-id" class="navbar-menu-button-wrapper">
                 <button id="navbar-menu-button-id" class="navbar-menu-button rotated-close" onclick="openNavbarMenu();">
-                    <!-- This Icon from www.flaticon.com-->
-                    <img id="navbar-button-menu-id" class="navbar-image navbar-btn-opened" th:src="@{icons/menu.png}"/>
-                    <img id="navbar-button-close-id" class="navbar-image navbar-btn-closed" th:src="@{icons/close.png}"/>
+                    <!-- These Icons are from www.flaticon.com-->
+                    <img id="navbar-button-menu-id" class="navbar-image navbar-btn-opened" src="/icons/menu.png"/>
+                    <img id="navbar-button-close-id" class="navbar-image navbar-btn-closed" src="/icons/close.png"/>
                 </button>
             </div>
             <div id="navbar-id" class="navbar navbar-off">
@@ -29,19 +28,6 @@
                 </nav>
             </div>
 
-<!--            <div class="container-photo">-->
-<!--                <div class="main-image-carrier"></div>-->
-<!--                <h1 class="logo-inside-name">Igor Petrov</h1>-->
-<!--                <h3 class="logo-inside-text" id="logo-inside-text-id">Russia-based Java Software Developer</h3>-->
-
-<!--                <div class="button-to-about-me-wrapper">-->
-<!--                    <button class="button-to-about-me" th:href="@{/}" onclick="scrollToAboutMe();">-->
-<!--                        &lt;!&ndash; This Icon from www.flaticon.com&ndash;&gt;-->
-<!--                        <img th:src="@{icons/down-arrow.png}"/>-->
-<!--                    </button>-->
-<!--                </div>-->
-<!--            </div>-->
-
             <div class="container-photo">
                 <div class="main-image-carrier">
                     <h1 class="logo-inside-name">Igor Petrov</h1>
@@ -49,9 +35,9 @@
                 </div>
 
                 <div class="button-to-about-me-wrapper">
-                    <button class="button-to-about-me" th:href="@{/}" onclick="scrollToAboutMe();">
-                        <!-- This Icon from www.flaticon.com-->
-                        <img th:src="@{icons/down-arrow.png}"/>
+                    <button class="button-to-about-me" href="/" onclick="scrollToAboutMe();">
+                        <!-- This Icon is from www.flaticon.com-->
+                        <img src="/icons/down-arrow.png"/>
                     </button>
                 </div>
             </div>
@@ -61,6 +47,7 @@
                     <h1 class="about-me-header">About me</h1>
                     <div class="about-me-container">
                         <div class="left-about-me-wrapper">
+                            <!-- This Icon is from www.flaticon.com-->
                             <img class="left-about-me-image" src="/icons/my-info.png">
                             <h3 style="margin-top: -9px;">About me</h3>
                             <div class="border-about-me"></div>
@@ -70,6 +57,7 @@
                         <div class="border-between-about-me"></div>
 
                         <div class="right-about-me-wrapper">
+                            <!-- This Icon is from www.flaticon.com-->
                             <img class="right-about-me-image" src="/icons/my-skills.png">
                             <h3 style="margin-top: 2px;">My skills</h3>
                             <div class="skills-container">
@@ -97,8 +85,6 @@
             </div>
 
             <div id="my-projects-wrapper-id" class="my-projects-wrapper">
-<!--                <img src="icons/photo-1455476915919-2b028d0a1230.jpg" style="width:100%;opacity: 0.05;max-height: 600px;">-->
-
                 <div id="my-projects-list-id" class="my-projects-list">
                     <h1 class="my-projects-header">My Projects</h1>
 
@@ -106,7 +92,7 @@
                         <!-- 1 project -->
                         <div class="single-project">
                             <a class="project-photo-link" href="https://github.com/RealCryZed/cstv">
-                                <img class="project-image" src="icons/1-pic-project.png">
+                                <img class="project-image" src="/icons/1-pic-project.png">
                                 <div class="project-image-on-hover">
                                     <h3 class="project-image-text-inside">Visit the site</h3>
                                 </div>
@@ -244,19 +230,24 @@
                     <div class="socials">
                         <div class="socials-wrap">
                             <a class="socials-links" href="https://twitter.com/RealCryZed">
-                                <img class="socials-images" src="icons/twitter.png">
+                                <!-- This Icon is from www.flaticon.com-->
+                                <img class="socials-images" src="/icons/twitter.png">
                             </a>
                             <a class="socials-links" href="https://github.com/RealCryZed">
-                                <img class="socials-images" src="icons/github.png">
+                                <!-- This Icon is from www.flaticon.com-->
+                                <img class="socials-images" src="/icons/github.png">
                             </a>
                             <a class="socials-links" href="https://www.instagram.com/realcryzed/">
-                                <img class="socials-images" src="icons/instagram.png">
+                                <!-- This Icon is from www.flaticon.com-->
+                                <img class="socials-images" src="/icons/instagram.png">
                             </a>
                             <a class="socials-links" href="https://vk.com/ugotheadshotted">
-                                <img class="socials-images" src="icons/vk.png">
+                                <!-- This Icon is from www.flaticon.com-->
+                                <img class="socials-images" src="/icons/vk.png">
                             </a>
                             <a class="socials-links" href="mailto:realcryzed@gmail.com">
-                                <img class="socials-images" src="icons/email.png">
+                                <!-- This Icon is from www.flaticon.com-->
+                                <img class="socials-images" src="/icons/email.png">
                             </a>
                         </div>
                     </div>
