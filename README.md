@@ -1,6 +1,6 @@
 # Portfolio site
 
-I built a one-page website that introduces my skills and shows my projects that I built. You can see it [here](https://cryzed.000webhostapp.com/)
+I built a one-page website that introduces my skills and shows my projects that I built. You can see it [here](https://cryzed.000webhostapp.com/).
 
 ## Built with
 
